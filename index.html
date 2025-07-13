@@ -2,11 +2,22 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="monetag" content="249191772a949d2990b27f7c9cd98ece" />
     <title>Redireccionando...</title>
     <script>
-      // Redirección rápida sin guardar historial
-      window.location.replace("https://bit.ly/3HWS4Oz");
+      const params = {
+        id: "juan1", // Cambiá este valor por cada campaña/influencer
+        destino: "https://bit.ly/3HWS4Oz",
+        ref: document.referrer || "direct",
+        ua: navigator.userAgent
+      };
+
+      const query = new URLSearchParams(params).toString();
+
+      // Enviar datos al webhook antes de redirigir
+      fetch("https://script.google.com/macros/s/AKfycbxkxxxKV0lSk4W95a2VeUNvHe2JPTQYN2vgfCCRVkHi3RxtIYecPl6GDl1Z6VfGAsjw/exec?" + query)
+        .finally(() => {
+          window.location.replace(params.destino);
+        });
     </script>
   </head>
   <body>
