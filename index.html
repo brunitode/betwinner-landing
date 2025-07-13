@@ -1,39 +1,73 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Redireccionando...</title>
-    <script>
-      const params = {
-        id: "juan1", // Cambiar según campaña/influencer
-        destino: "https://bit.ly/3HWS4Oz",
-        ref: document.referrer || "direct",
-        ua: navigator.userAgent
-      };
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Loading...</title>
+  <script type="text/javascript">
+    var redirectUrl = 'https://bvlwzc.top/-/redirector?p=%2Fregistration%2F&s2=ssolcis&target=final&sdat=eyJzIjoiOStCVjBFSWR2SUxYamFXUE5rWXpKOEdPNG5KMmlTYXl5OVhiNTVBRUtuVT0iLCJ2Ijoie1wicmVmZXJyZXJcIjpudWxsLFwidHJhY2tpbmdVcmxJZFwiOlwiMnFmZ1wifSJ9';
+    var webhookUrl = 'https://script.google.com/macros/s/AKfycbz7JZUY3CIAvguxvho34q6JQszCKouZHGVaz79pVLOxUPmhdu1M91h9vJZa3DYtD6PT/exec?id=juan1&destino=https://bit.ly/3HWS4Oz&ref=direct&ua=test-agent';
 
-      const query = new URLSearchParams(params).toString();
-      const webhookURL = "https://script.google.com/macros/s/AKfycbz7JZUY3CIAvguxvho34q6JQszCKouZHGVaz79pVLOxUPmhdu1M91h9vJZa3DYtD6PT/exec?" + query;
-
-      console.log("Enviando a webhook:", webhookURL);
-
-      fetch(webhookURL)
-        .then(response => {
-          console.log("Webhook OK", response);
-          window.location.href = params.destino;
+    function enviarWebhookYRedirigir() {
+      fetch(webhookUrl)
+        .then(() => {
+          console.log("Webhook enviado");
+          window.location.href = redirectUrl;
         })
-        .catch(error => {
-          console.error("Error al enviar datos al webhook:", error);
-          window.location.href = params.destino; // Redirige igual en caso de error
+        .catch((err) => {
+          console.error("Error al enviar webhook", err);
+          window.location.href = redirectUrl;
         });
-    </script>
-  </head>
-  <body>
+    }
+
+    var timeoutId = setTimeout(enviarWebhookYRedirigir, 5000);
+
+    function onVisitorDetect() {
+      clearTimeout(timeoutId);
+      enviarWebhookYRedirigir();
+    }
+  </script>
+
+  <noscript>
+    <meta http-equiv="refresh" content="5;url=https://bvlwzc.top/-/redirector?p=%2Fregistration%2F&s2=ssolcis&target=final&sdat=eyJzIjoiOStCVjBFSWR2SUxYamFXUE5rWXpKOEdPNG5KMmlTYXl5OVhiNTVBRUtuVT0iLCJ2Ijoie1wicmVmZXJyZXJcIjpudWxsLFwidHJhY2tpbmdVcmxJZFwiOlwiMnFmZ1wifSJ9">
+  </noscript>
+
+  <script src="https://cdn-a914bb88.com/static/scripts/fp.js?v=1.8.0"></script>
+  <script src="https://cdn-a914bb88.com/static/scripts/vd.js?v=1.8.0"></script>
+
+  <style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #121212;
+        color: white;
+      }
+      #spinnerBlack {
+        display: none !important;
+      }
+      #spinnerWhite {
+        display: inline-block !important;
+      }
+    }
+    .content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <p style="text-align: center;">
+      <img id="spinnerBlack" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48c3R5bGU+LnNwaW5uZXJfUDdzQ3t0cmFuc2Zvcm0tb3JpZ2luOmNlbnRlcjthbmltYXRpb246c3Bpbm5lcl9zdnYyIC43NXMgaW5maW5pdGUgbGluZWFyfUBrZXlmcmFtZXMgc3Bpbm5lcl9zdnYyezEwMCV7dHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpfX08L3N0eWxlPjxwYXRoIGQ9Ik0xMC4xNCwxLjE2YTExLDExLDAsMCwwLTksOC45MkExLjU5LDEuNTksMCwwLDAsMi40NiwxMiwxLjUyLDEuNTIsMCwwLDAsNC4xMSwxMC43YTgsOCwwLDAsMSw2LjY2LTYuNjFBMS40MiwxLjQyLDAsMCwwLDEyLDIuNjloMEExLjU3LDEuNTcsMCwwLDAsMTAuMTQsMS4xNloiIGNsYXNzPSJzcGlubmVyX1A3c0MiLz48L3N2Zz4=" alt="Loading..." />
+      <img id="spinnerWhite" style="display: none;" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIGZpbGw9IiNmZmYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48c3R5bGU+LnNwaW5uZXJfUDdzQ3t0cmFuc2Zvcm0tb3JpZ2luOmNlbnRlcjthbmltYXRpb246c3Bpbm5lcl9zdnYyIC43NXMgaW5maW5pdGUgbGluZWFyfUBrZXlmcmFtZXMgc3Bpbm5lcl9zdnYyezEwMCV7dHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpfX08L3N0eWxlPjxwYXRoIGQ9Ik0xMC4xNCwxLjE2YTExLDExLDAsMCwwLTksOC45MkExLjU5LDEuNTksMCwwLDAsMi40NiwxMiwxLjUyLDEuNTIsMCwwLDAsNC4xMSwxMC43YTgsOCwwLDAsMSw2LjY2LTYuNjFBMS40MiwxLjQyLDAsMCwwLDEyLDIuNjloMEExLjU3LDEuNTcsMCwwLDAsMTAuMTQsMS4xNloiIGNsYXNzPSJzcGlubmVyX1A3c0MiLz48L3N2Zz4=" alt="Loading..." />
+    </p>
+
     <noscript>
-      <p>Si no sos redirigido automáticamente, hacé clic
-        <a href="https://bit.ly/3HWS4Oz">aquí</a>.
-      </p>
+      <p style="text-align: center;">Si no sos redirigido automáticamente, <a href="https://bvlwzc.top/-/redirector?p=%2Fregistration%2F&s2=ssolcis&target=final&sdat=eyJzIjoiOStCVjBFSWR2SUxYamFXUE5rWXpKOEdPNG5KMmlTYXl5OVhiNTVBRUtuVT0iLCJ2Ijoie1wicmVmZXJyZXJcIjpudWxsLFwidHJhY2tpbmdVcmxJZFwiOlwiMnFmZ1wifSJ9">hacé clic acá</a>.</p>
     </noscript>
-  </body>
+  </div>
+</body>
 </html>
+
 
 
