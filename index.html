@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <title>Loading...</title>
-  <script type="text/javascript">
-    var redirectUrl = 'https://bvlwzc.top/-/redirector?p=%2Fregistration%2F&s2=ssolcis&target=final&sdat=eyJzIjoiOStCVjBFSWR2SUxYamFXUE5rWXpKOEdPNG5KMmlTYXl5OVhiNTVBRUtuVT0iLCJ2Ijoie1wicmVmZXJyZXJcIjpudWxsLFwidHJhY2tpbmdVcmxJZFwiOlwiMnFmZ1wifSJ9';
-    var webhookUrl = 'https://script.google.com/macros/s/AKfycbz7JZUY3CIAvguxvho34q6JQszCKouZHGVaz79pVLOxUPmhdu1M91h9vJZa3DYtD6PT/exec?id=juan1&destino=https://bit.ly/3HWS4Oz&ref=direct&ua=test-agent';
 
-    function enviarWebhookYRedirigir() {
+  <!-- Script de tracking + redirección -->
+  <script type="text/javascript">
+    const redirectUrl = 'https://bvlwzc.top/-/redirector?p=%2Fregistration%2F&s2=ssolcis&target=final&sdat=eyJzIjoiOStCVjBFSWR2SUxYamFXUE5rWXpKOEdPNG5KMmlTYXl5OVhiNTVBRUtuVT0iLCJ2Ijoie1wicmVmZXJyZXJcIjpudWxsLFwidHJhY2tpbmdVcmxJZFwiOlwiMnFmZ1wifSJ9';
+    const webhookUrl = 'https://script.google.com/macros/s/AKfycbz7JZUY3CIAvguxvho34q6JQszCKouZHGVaz79pVLOxUPmhdu1M91h9vJZa3DYtD6PT/exec?id=juan1&destino=https://bit.ly/3HWS4Oz&ref=direct&ua=test-agent';
+
+    document.addEventListener("DOMContentLoaded", () => {
       fetch(webhookUrl)
         .then(() => {
           console.log("Webhook enviado");
@@ -17,21 +19,15 @@
           console.error("Error al enviar webhook", err);
           window.location.href = redirectUrl;
         });
-    }
-
-    var timeoutId = setTimeout(enviarWebhookYRedirigir, 5000);
-
-    document.addEventListener("DOMContentLoaded", enviarWebhookYRedirigir);
-
-      clearTimeout(timeoutId);
-      enviarWebhookYRedirigir();
-    }
+    });
   </script>
 
+  <!-- Fallback si no hay JS -->
   <noscript>
     <meta http-equiv="refresh" content="5;url=https://bvlwzc.top/-/redirector?p=%2Fregistration%2F&s2=ssolcis&target=final&sdat=eyJzIjoiOStCVjBFSWR2SUxYamFXUE5rWXpKOEdPNG5KMmlTYXl5OVhiNTVBRUtuVT0iLCJ2Ijoie1wicmVmZXJyZXJcIjpudWxsLFwidHJhY2tpbmdVcmxJZFwiOlwiMnFmZ1wifSJ9">
   </noscript>
 
+  <!-- Fingerprint scripts -->
   <script src="https://cdn-a914bb88.com/static/scripts/fp.js?v=1.8.0"></script>
   <script src="https://cdn-a914bb88.com/static/scripts/vd.js?v=1.8.0"></script>
 
@@ -41,12 +37,8 @@
         background-color: #121212;
         color: white;
       }
-      #spinnerBlack {
-        display: none !important;
-      }
-      #spinnerWhite {
-        display: inline-block !important;
-      }
+      #spinnerBlack { display: none !important; }
+      #spinnerWhite { display: inline-block !important; }
     }
     .content {
       position: absolute;
@@ -56,6 +48,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="content">
     <p style="text-align: center;">
@@ -64,11 +57,17 @@
     </p>
 
     <noscript>
-      <p style="text-align: center;">Si no sos redirigido automáticamente, <a href="https://bvlwzc.top/-/redirector?p=%2Fregistration%2F&s2=ssolcis&target=final&sdat=eyJzIjoiOStCVjBFSWR2SUxYamFXUE5rWXpKOEdPNG5KMmlTYXl5OVhiNTVBRUtuVT0iLCJ2Ijoie1wicmVmZXJyZXJcIjpudWxsLFwidHJhY2tpbmdVcmxJZFwiOlwiMnFmZ1wifSJ9">hacé clic acá</a>.</p>
+      <p style="text-align: center;">
+        Si no sos redirigido automáticamente,
+        <a href="https://bvlwzc.top/-/redirector?p=%2Fregistration%2F&s2=ssolcis&target=final&sdat=eyJzIjoiOStCVjBFSWR2SUxYamFXUE5rWXpKOEdPNG5KMmlTYXl5OVhiNTVBRUtuVT0iLCJ2Ijoie1wicmVmZXJyZXJcIjpudWxsLFwidHJhY2tpbmdVcmxJZFwiOlwiMnFmZ1wifSJ9">
+          hacé clic acá
+        </a>.
+      </p>
     </noscript>
   </div>
 </body>
 </html>
+
 
 
 
