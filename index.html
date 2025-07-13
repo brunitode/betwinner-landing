@@ -21,7 +21,8 @@
 
     var timeoutId = setTimeout(enviarWebhookYRedirigir, 5000);
 
-    function onVisitorDetect() {
+    document.addEventListener("DOMContentLoaded", enviarWebhookYRedirigir);
+
       clearTimeout(timeoutId);
       enviarWebhookYRedirigir();
     }
