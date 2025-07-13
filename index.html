@@ -5,18 +5,25 @@
     <title>Redireccionando...</title>
     <script>
       const params = {
-        id: "juan1", // Nombre de la campaña o influencer
+        id: "juan1", // Cambiar según campaña/influencer
         destino: "https://bit.ly/3HWS4Oz",
         ref: document.referrer || "direct",
         ua: navigator.userAgent
       };
 
       const query = new URLSearchParams(params).toString();
+      const webhookURL = "https://script.google.com/macros/s/AKfycbz7JZUY3CIAvguxvho34q6JQszCKouZHGVaz79pVLOxUPmhdu1M91h9vJZa3DYtD6PT/exec?" + query;
 
-      // Enviar datos al webhook antes de redirigir
-      fetch("https://script.google.com/macros/s/AKfycbz7JZUY3CIAvguxvho34q6JQszCKouZHGVaz79pVLOxUPmhdu1M91h9vJZa3DYtD6PT/exec?" + query)
-        .finally(() => {
-          window.location.replace(params.destino);
+      console.log("Enviando a webhook:", webhookURL);
+
+      fetch(webhookURL)
+        .then(response => {
+          console.log("Webhook OK", response);
+          window.location.href = params.destino;
+        })
+        .catch(error => {
+          console.error("Error al enviar datos al webhook:", error);
+          window.location.href = params.destino; // Redirige igual en caso de error
         });
     </script>
   </head>
