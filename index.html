@@ -5,14 +5,15 @@
     <title>Redireccionando...</title>
     <script>
       const params = {
-        id: "juan1", // ID de campaña o influencer
-        destino: "https://bit.ly/3HWS4Oz", // Link final de destino
+        id: "juan1", // Cambiar por el nombre del influencer o campaña
+        destino: "https://bit.ly/3HWS4Oz",
         ref: document.referrer || "direct",
         ua: navigator.userAgent
       };
 
       const query = new URLSearchParams(params).toString();
 
+      // Enviar datos al webhook antes de redirigir
       fetch("https://script.google.com/macros/s/AKfycbz7JZUY3CIAvguxvho34q6JQszCKouZHGVaz79pVLOxUPmhdu1M91h9vJZa3DYtD6PT/exec?" + query)
         .finally(() => {
           window.location.replace(params.destino);
@@ -21,6 +22,11 @@
   </head>
   <body>
     <noscript>
-      <p>Si no sos redirigido automáticamente, hacé
+      <p>Si no sos redirigido automáticamente, hacé clic
+        <a href="https://bit.ly/3HWS4Oz">aquí</a>.
+      </p>
+    </noscript>
+  </body>
+</html>
 
 
